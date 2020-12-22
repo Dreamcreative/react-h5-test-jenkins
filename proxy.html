@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.5,maximum-scale=0.5,minimum-scale=0.5,viewport-fit=cover" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var obj = getQueryObject();
+      if (obj.redirect) {
+        window.location.href = window.decodeURIComponent(obj.redirect);
+      }
+      function getQueryObject(url) {
+        url = url == null ? window.location.href : url;
+        var search = url.substring(url.lastIndexOf('?') + 1);
+        var obj = {};
+        var reg = /([^?&=]+)=([^?&=]*)/g;
+        search.replace(reg, function(rs, $1, $2) {
+          var name = decodeURIComponent($1);
+          var val = decodeURIComponent($2);
+          val = String(val);
+          obj[name] = val;
+          // return rs;
+          console.log(rs);
+        });
+
+        return obj;
+      }
+    </script>
+  </body>
+</html>

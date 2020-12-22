@@ -1,0 +1,110 @@
+html,
+body,
+#root {
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  height: 100%;
+  overflow: hidden;
+}
+ul,
+li,
+ol {
+  list-style: none;
+  touch-action: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+div,
+dl,
+dt,
+dd,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+ol,
+ul,
+li,
+table,
+th,
+td,
+p,
+span,
+a {
+  border: 0;
+}
+p{
+  margin :0;
+  padding:0;
+}
+img,
+input {
+  border: none;
+  vertical-align: middle;
+}
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+body {
+  font-family: Tahoma, Arial, Helvetica, '微软雅黑';
+  font-size: 24px;
+  text-align: left;
+  background: #fff;
+  color: #333;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+/* iphonex 安全区域 */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+/* iphonex fix底部元素适配 */
+// :global(.fixed_bottom) {
+//   padding-bottom: constant(safe-area-inset-bottom);
+//   padding-bottom: env(safe-area-inset-bottom);
+//   position: fixed;
+//   z-index: 10;
+//   background-color: #fff;
+// }
+
+:global(.clearfix:after) {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+[title~='站长统计'] {
+  display: none;
+}
+
+
+
+
+@import url('./animation.less');
